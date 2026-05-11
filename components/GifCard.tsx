@@ -27,6 +27,7 @@ export function GifCard({ gif, caption, position }: Props) {
     // `@container` makes the figure a size container so children can size against its width via `cqi`. 
     <figure className="flex flex-col gap-2 @container">
       <div className="relative overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-900">
+        {/* eslint-disable-next-line @next/next/no-img-element -- intentional, see README §6 */}
         <img
           src={gif.url}
           alt={gif.title || caption || "GIF"}
